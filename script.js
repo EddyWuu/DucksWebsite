@@ -20,27 +20,21 @@ document.querySelectorAll('nav a').forEach(anchor => {
 document.addEventListener("DOMContentLoaded", function () {
     let imageFiles = [
         "assignment_grind.jpeg",
-        "Capstone!.jpeg",
-        "cat.jpeg",
-        "Cool_vending_machine.jpeg",
+        "Capstone_buddies.jpeg",
         "Escape_room_artists.jpeg",
-        "grin.jpeg",
-        "kitty.jpeg",
-        "Lego!.jpeg",
-        "Mahjong.jpeg",
-        "Plants.jpeg",
-        "Shiba.jpeg",
         "This_is_definity_broken.jpeg",
-        "two_shibas.jpeg",
         "Wise_words.jpeg",
         "Conquered.jpeg",
-        "yum.jpeg"
+        "Yum.jpeg"
     ];
 
     // Add image1 to image23 dynamically
     for (let i = 1; i <= 23; i++) {
         imageFiles.push(`image${i}.jpeg`);
     }
+
+    // Shuffle the array to randomize image order
+    imageFiles.sort(() => Math.random() - 0.5);
 
     let gallery = document.getElementById("gallery");
 
@@ -59,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Extract filename without extension
             let fileName = file.split(".")[0];
 
-            // Check if filename is NOT image1-23
+            // Check if filename is NOT image1-23 (only named images get captions)
             if (!/^image\d+$/.test(fileName)) {
                 let caption = document.createElement("p");
                 caption.classList.add("photo-caption");
