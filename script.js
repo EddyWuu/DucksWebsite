@@ -17,7 +17,6 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Dynamically load images in the Life Gallery
 document.addEventListener("DOMContentLoaded", function () {
     let imageFiles = [
         "assignment_grind.jpeg",
@@ -47,11 +46,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (gallery) {
         imageFiles.forEach(file => {
+            let imgContainer = document.createElement("div");
+            imgContainer.classList.add("img-container");
+
             let img = document.createElement("img");
             img.src = "photos/" + file;
             img.alt = "Life photo";
             img.classList.add("life-photo");
-            gallery.appendChild(img);
+
+            imgContainer.appendChild(img);
+
+            // Extract filename without extension
+            let fileName = file.split(".")[0];
+
+            // Check if filename is NOT image1-23
+            if (!/^image\d+$/.test(fileName)) {
+                let caption = document.createElement("p");
+                caption.classList.add("photo-caption");
+                caption.textContent = fileName.replace(/_/g, " ").replace(/!/, ""); // Format title
+                imgContainer.appendChild(caption);
+            }
+
+            gallery.appendChild(imgContainer);
         });
     }
 });
