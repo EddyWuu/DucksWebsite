@@ -5,20 +5,24 @@ body {
     text-align: center;
     background-color: #f4f4f4;
 }
+
 header {
     background: #333;
     color: white;
     padding: 20px;
 }
+
 nav {
     background: #444;
     padding: 10px;
 }
+
 nav a {
     color: white;
     margin: 10px;
     text-decoration: none;
 }
+
 section {
     margin: 20px;
     padding: 20px;
@@ -26,31 +30,35 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
 .project {
     background: #eee;
     padding: 10px;
     margin: 10px;
     border-radius: 5px;
 }
+
 footer {
     background: #222;
     color: white;
     padding: 10px;
 }
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
     justify-content: center;
-    gap: 15px;
-    padding: 20px;
 }
+
 .life-photo {
-    width: 300px;
+    width: 200px; 
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
+
 .life-photo:hover {
     transform: scale(1.05);
 }
