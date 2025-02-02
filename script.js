@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "This_is_definity_broken.jpeg",
         "Wise_words.jpeg",
         "Conquered.jpeg",
-        "Yum.jpeg"
+        "yum.jpeg"
     ];
 
     // Add image1 to image23 dynamically
