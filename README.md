@@ -1,2 +1,0 @@
-# DucksWebsite
-My personal website

@@ -1,0 +1,135 @@
+.exp-ball-outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.5rem;
+  min-width: 160px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.exp-ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #f5723f, #c84d12);
+  border: 3px solid #f5723f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(245, 114, 63, 0.7);
+  transition: transform 0.3s;
+}
+.exp-ball:focus,
+.exp-ball:hover {
+  outline: none;
+  transform: scale(1.1);
+}
+
+.exp-ball-inner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.exp-ball-inner img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.exp-ball-placeholder {
+  width: 50px;
+  height: 50px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.exp-ball-dropdown {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 1.2rem;
+  background: #16253a;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  min-width: 230px;
+  color: #fff;
+  text-align: left;
+  animation: expballSlideDown 0.22s cubic-bezier(0.44,0,0.56,1);
+}
+
+.exp-ball-dropdown h3 {
+  color: #f5723f;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.exp-ball-dropdown .role {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.exp-ball-dropdown .duration {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+.exp-ball-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.exp-ball-dropdown li {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+.exp-ball-dropdown .bullet-dot {
+  color: #f5723f;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+.orbs-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  padding: 16px 0;
+  flex-wrap: wrap;      
+  overflow-x: visible;  
+  width: 100%;
+  box-sizing: border-box;
+}
+.orb-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+.orb-caption {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Slide down for dropdown */
+@keyframes expballSlideDown {
+  from { opacity: 0; transform: translateY(-18px) translateX(-50%);}
+  to   { opacity: 1; transform: translateY(0) translateX(-50%);}
+}
