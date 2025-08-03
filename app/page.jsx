@@ -14,9 +14,10 @@ export default function Home() {
       role: "iOS Developer",
       duration: "Jan 2024 – Apr 2024",
       bullets: [
-        "Built custom form template engine using JavaScript",
-        "Optimized performance of document rendering",
-        "Worked in a fast-paced startup using Next.js"
+        "Joined the Yuvee mobile development team to develop technical solutions for the Yuvee Android and iOS app, utilizing SwiftUI and Jetpack compose in MVVM architectural pattern to engineer features",
+        "Contributed significantly to the migration of the iOS app from UIKit to SwiftUI, modernizing user interface, improving app loading speed by 30%, and enhancing data rendering efficiency by 25% ",
+        "Utilized Postman and RESTful API endpoints to interact with data stored in RealmDB for application functionalities",
+        "Addressed and resolved software related bugs to enhance functionality and user experience in the Yuvee applications"
       ],
       order: 1
     },
@@ -25,11 +26,12 @@ export default function Home() {
       logoSrc: "/ecobee.png",
       company: "Ecobee",
       role: "iOS Developer",
-      duration: "Jan 2023 – Apr 2023",
+      duration: "May 2023 – Aug 2023",
       bullets: [
-        "Developed iOS app features for smart home devices",
-        "Implemented UI/UX improvements",
-        "Collaborated with cross-functional teams"
+        "Facilitated and participated in iOS mobile scrum team to develop technical solutions for the Ecobee iOS app ",
+        "Developed IoT-enabled features for the Ecobee Smart Device using Xcode, Swift, and SwiftUI in MVVM and MVP architectures to enhance user interactions",
+        "Converted 70% of PromiseKit implementations to Swift’s native async/await, improving code readability, optimizing real-time data processing and reducing response time for the IoT devices by 25%",
+        "Performed bug resolutions to resolve issues and optimize user experiences"
       ],
       order: 2
     },
@@ -38,11 +40,12 @@ export default function Home() {
       logoSrc: "/havas.png",
       company: "Havas",
       role: "Mobile Developer",
-      duration: "Jan 2022 – Apr 2022",
+      duration: "Sept 2022 – Dec 2022",
       bullets: [
-        "Created mobile marketing campaigns",
-        "Built responsive mobile interfaces",
-        "Worked with creative teams on app designs"
+        "Collaborated with the iOS mobile scrum team to develop technical solutions for the Rogers Bank App ",
+        "Using Xcode and Swift in MVVM architecture, enhanced and debugged frontend and backend features  ",
+        "Composed JSON data source test files for view model logic unit testing and quality assurance",
+        "Implemented analytic tracking to record performance statistics and client data from over 1000+ sessions using iOS SDK "
       ],
       order: 3
     },
@@ -51,11 +54,11 @@ export default function Home() {
       logoSrc: "/swift_medical.png",
       company: "Swift Medical",
       role: "Software Developer",
-      duration: "Sep 2021 – Dec 2021",
+      duration: "Jan 2022 – April 2022",
       bullets: [
-        "Developed medical imaging applications",
-        "Implemented data visualization features",
-        "Worked with healthcare technology stack"
+        "Integrated a multi-spectral imaging device into various iOS mobile apps with Swift and Objective-C ",
+        "Replicated an oxygenation imaging algorithm into Jupyter Notebook with Python and OpenCV, increasing precision of the imaging process by 10% troubleshooting and optimization ",
+        "Applied an app variation that cycles through 4 device imaging modalities to prepare for performance testing with EMR, taking over 100+ spectral images in under 20 seconds "
       ],
       order: 4
     },
