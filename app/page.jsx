@@ -5,6 +5,7 @@ import ExperienceBall from '../components/ExperienceBall'
 
 export default function Home() {
   const [openExperiences, setOpenExperiences] = useState(new Set())
+  const [copied, setCopied] = useState(false)
 
   const experiences = [
     {
@@ -86,6 +87,12 @@ export default function Home() {
     })
   }
 
+  const handleCopy = () => {
+    navigator.clipboard?.writeText('edmond.wuca@gmail.com')
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   // Smooth scrolling for nav links
   useEffect(() => {
     const links = document.querySelectorAll('a[href^="#"]')
@@ -127,7 +134,9 @@ export default function Home() {
         <section id="education" className="section-education">
           <h2>Education</h2>
           <p>University of Waterloo – Bachelor of Applied Science in Computer Engineering</p>
-          <p className="muted">Relevant courses, coding clubs, or academic achievements go here.</p>
+          <p className="muted">
+            I completed my Bachelor of Applied Science in Computer Engineering (Honours, Co-op) at the University of Waterloo June 2025, where I built a strong foundation in both hardware and software systems. My coursework covered algorithms and data structures, systems programming, database systems, and real-time operating systems, along with advanced studies in computer networks and networking protocols. Classes like Computer Networks and Advanced Topics in Networking gave me hands-on experience with networking protocols, routing, and performance optimization. Paired with courses in software design, optimization, and performance engineering, this mix of theory and practice equipped me to design efficient, reliable, and scalable systems across both mobile and networked environments.
+          </p>
         </section>
 
         <section id="career" className="section-career">
@@ -192,23 +201,23 @@ export default function Home() {
           <p>You can find me here:</p>
           <p>
             <a href="https://github.com/eddywuu" className="accent-link">GitHub</a>
-            <a href="https://linkedin.com/in/eddywuu" className="accent-link">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/eddy-wu-a1016a207/" className="accent-link">LinkedIn</a>
           </p>
         </section>
 
         <section id="contact" className="section-contact">
           <h2>Contact</h2>
-          <div className="contact-form">
-            <input type="text" placeholder="Your name" />
-            <input type="email" placeholder="Your email" />
-            <textarea placeholder="Your message" rows="4" />
+          <div className="contact-row">
+            <a href="mailto:edmond.wuca@gmail.com" className="email-link">
+              edmond.wuca@gmail.com
+            </a>
             <button
-              onClick={e => {
-                e.preventDefault()
-                alert('Message sent! (This is a demo)')
-              }}
               className="btn-primary"
-            >Send</button>
+              onClick={handleCopy}
+              type="button"
+            >
+              {copied ? 'Copied!' : 'Copy'}
+            </button>
           </div>
         </section>
       </main>
