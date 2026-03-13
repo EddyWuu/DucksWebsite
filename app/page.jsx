@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import ExperienceBall from '../components/ExperienceBall'
 
+const basePath = process.env.NODE_ENV === 'production' ? '/DucksWebsite' : ''
+
 export default function Home() {
   const [openExperiences, setOpenExperiences] = useState(new Set())
   const [copied, setCopied] = useState(false)
@@ -10,7 +12,7 @@ export default function Home() {
   const experiences = [
     {
       id: 'glc',
-      logoSrc: "/glc.png",
+      logoSrc: `${basePath}/glc.png`,
       company: "GLC",
       role: "Software Developer",
       duration: "Current",
@@ -24,7 +26,7 @@ export default function Home() {
     },
     {
       id: 'greenlight',
-      logoSrc: "/greenlight_essentials.png",
+      logoSrc: `${basePath}/greenlight_essentials.png`,
       company: "Greenlight Essentials",
       role: "iOS Developer",
       duration: "Jan 2024 – Apr 2024",
@@ -38,7 +40,7 @@ export default function Home() {
     },
     {
       id: 'ecobee',
-      logoSrc: "/ecobee.png",
+      logoSrc: `${basePath}/ecobee.png`,
       company: "Ecobee",
       role: "iOS Developer",
       duration: "May 2023 – Aug 2023",
@@ -52,7 +54,7 @@ export default function Home() {
     },
     {
       id: 'havas',
-      logoSrc: "/havas.png",
+      logoSrc: `${basePath}/havas.png`,
       company: "Havas",
       role: "Mobile Developer",
       duration: "Sept 2022 – Dec 2022",
@@ -66,7 +68,7 @@ export default function Home() {
     },
     {
       id: 'swift',
-      logoSrc: "/swift_medical.png",
+      logoSrc: `${basePath}/swift_medical.png`,
       company: "Swift Medical",
       role: "Software Developer",
       duration: "Jan 2022 – April 2022",
@@ -79,7 +81,7 @@ export default function Home() {
     },
     {
       id: 'we',
-      logoSrc: "/WE_accelerate.png",
+      logoSrc: `${basePath}/WE_accelerate.png`,
       company: "WE Accelerate",
       role: "Junior Developer",
       duration: "May 2021 – Aug 2021",
@@ -142,7 +144,7 @@ export default function Home() {
           <p className="hero-subtitle">Building mobile apps, full-stack platforms, and everything in between.</p>
           <div className="home-cta">
             <a href="#projects" className="btn-primary">See my work</a>
-            <a href="/Eddy_Wu_SW_Resume_2.pdf" className="btn-outline" download>Download Resume</a>
+            <a href={`${basePath}/Eddy_Wu_SW_Resume_2.pdf`} className="btn-outline" download>Download Resume</a>
           </div>
         </section>
 
