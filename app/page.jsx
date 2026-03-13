@@ -1,6 +1,6 @@
 // app/page.jsx
 'use client'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef, useCallback } from 'react'
 import ExperienceBall from '../components/ExperienceBall'
 
 const basePath = process.env.NODE_ENV === 'production' ? '/DucksWebsite' : ''
@@ -8,6 +8,7 @@ const basePath = process.env.NODE_ENV === 'production' ? '/DucksWebsite' : ''
 export default function Home() {
   const [openExperiences, setOpenExperiences] = useState(new Set())
   const [copied, setCopied] = useState(false)
+  const detailRefs = useRef({})
 
   const experiences = [
     {
@@ -97,8 +98,14 @@ export default function Home() {
   const toggleExperience = (id) => {
     setOpenExperiences(prev => {
       const newSet = new Set(prev)
-      if (newSet.has(id)) newSet.delete(id)
-      else newSet.add(id)
+      if (newSet.has(id)) {
+        newSet.delete(id)
+      } else {
+        newSet.add(id)
+        setTimeout(() => {
+          detailRefs.current[id]?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }, 100)
+      }
       return newSet
     })
   }
@@ -182,7 +189,7 @@ export default function Home() {
               .filter(exp => openExperiences.has(exp.id))
               .sort((a, b) => a.order - b.order)
               .map(exp => (
-                <div key={exp.id} className="career-detail-card">
+                <div key={exp.id} ref={el => detailRefs.current[exp.id] = el} className="career-detail-card">
                   <div className="detail-header">
                     {/* ...logo... */}
                     <div>
