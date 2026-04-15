@@ -218,10 +218,44 @@ export default function Home() {
         <section id="projects" className="section-projects">
           <h2>Projects</h2>
 
+          {/* Spritfill */}
+          <div className="project-card">
+            <div className="project-header">
+              <div className="project-title-row">
+                <img src={`${basePath}/Spritfill.png`} alt="Spritfill logo" className="project-logo" />
+                <h3>Spritfill</h3>
+              </div>
+              <span className="project-tag">Published App</span>
+            </div>
+            <div className="project-tech">
+              <span>Swift</span><span>SwiftUI</span><span>Python</span><span>iPadOS</span>
+            </div>
+            <p className="project-description">
+              A pixel art editor for iPad and iPhone, built for beginners and experienced sprite artists. Draw on canvases from 16×16 to 512×512, choose from built-in palettes like PICO-8 and Endesga, or create your own. Features drawing tools (pencil, fill, shapes, gradients, dithering, symmetry), up to 8 layers, a recreate mode with premade sprites to practice on, and community features to share and download artwork. App contains in app purchases.
+            </p>
+            <div className="project-showcase">
+              {[1, 2, 3, 4, 5].map(n => (
+                <img
+                  key={n}
+                  src={`${basePath}/Spritfill${n}.${n === 1 ? 'png' : 'PNG'}`}
+                  alt={`Spritfill screenshot ${n}`}
+                  className="showcase-img"
+                />
+              ))}
+            </div>
+            <div className="project-links">
+              <a href="https://apps.apple.com/app/id6760877014" target="_blank" rel="noopener noreferrer">App Store</a>
+              <a href="https://github.com/EddyWuu/Spritfill" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+
           {/* AutoGreen */}
           <div className="project-card">
             <div className="project-header">
-              <h3>AutoGreen Mobile Plant System</h3>
+              <div className="project-title-row">
+                <img src={`${basePath}/AutoGreen.png`} alt="AutoGreen logo" className="project-logo" />
+                <h3>AutoGreen Mobile Plant System</h3>
+              </div>
               <span className="project-tag">School Project</span>
             </div>
             <div className="project-tech">
@@ -232,6 +266,16 @@ export default function Home() {
               <li><span className="bullet-dot">•</span>Leveraged Kotlin coroutines for asynchronous control to manage real-time sensor data updates and appropriate actions</li>
               <li><span className="bullet-dot">•</span>Designed and executed RESTful APIs with Flask to interface with Arduino, alongside a PostgreSQL database managed by AWS's RDS to store sensor data and manage system configurations</li>
             </ul>
+            <div className="project-showcase">
+              {[1, 2, 3].map(n => (
+                <img
+                  key={n}
+                  src={`${basePath}/AutoGreen${n}.png`}
+                  alt={`AutoGreen screenshot ${n}`}
+                  className="showcase-img"
+                />
+              ))}
+            </div>
             <div className="project-links">
               <a href="https://github.com/EddyWuu/AutoGreenArduino" target="_blank" rel="noopener noreferrer">Arduino Repo</a>
               <a href="https://github.com/EddyWuu/AutoGreen_Mobile_Android" target="_blank" rel="noopener noreferrer">Android App</a>
@@ -252,27 +296,35 @@ export default function Home() {
               <li><span className="bullet-dot">•</span>Created an Android Kotlin-based volunteering and events app using MVVM architecture, enabling users to discover local events and volunteering opportunities, and add them to an integrated in-app calendar</li>
               <li><span className="bullet-dot">•</span>Leveraged AWS services for scalable backend infrastructure, utilizing Flask to create a RESTful server and Amazon RDS to manage the PostgreSQL database, ensuring secure data storage and retrieval for events and user data</li>
             </ul>
+            <div className="project-showcase">
+              {[1, 2].map(n => (
+                <img
+                  key={n}
+                  src={`${basePath}/LocalLink${n}.png`}
+                  alt={`LocalLink screenshot ${n}`}
+                  className="showcase-img"
+                />
+              ))}
+            </div>
             <div className="project-links">
               <a href="https://github.com/EddyWuu/local_link" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
 
-          {/* Spritfill */}
+          {/* Spritkit */}
           <div className="project-card">
             <div className="project-header">
-              <h3>Spritfill</h3>
+              <h3>Spritkit</h3>
               <span className="project-tag">Personal Project</span>
             </div>
             <div className="project-tech">
-              <span>Swift</span><span>SwiftUI</span><span>Python</span><span>iOS</span>
+              <span>Swift</span><span>SwiftUI</span><span>Core Image</span><span>Core Graphics</span><span>MVVM</span><span>iOS</span>
             </div>
-            <ul className="project-bullets">
-              <li><span className="bullet-dot">•</span>Developed an iOS sprite and pixel art creation app in Swift and SwiftUI, featuring an intuitive touch-based drawing interface for crafting custom game-ready assets</li>
-              <li><span className="bullet-dot">•</span>Implemented a variety of selectable color palettes, adjustable tile sizes, and configurable canvas dimensions, giving users full creative control</li>
-              <li><span className="bullet-dot">•</span>Built a Python backend server to support pixelation processing and asset management</li>
-            </ul>
+            <p className="project-description">
+              A native iOS sprite operations toolkit built as a companion to Spritfill. Provides five core tools for pixel artists and game developers: sprite sheet cutting (grid or auto bounding-box detection), animation preview with adjustable FPS and playback modes, color palette extraction using median-cut, nearest-neighbor sprite scaling, and photo-to-pixel-art conversion via Core Image. Built with strict MVVM architecture and Swift Concurrency, with all image processing handled off the main thread by a stateless service layer.
+            </p>
             <div className="project-links">
-              <a href="https://github.com/EddyWuu/Spritfill" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://github.com/EddyWuu/Spritkit" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </section>

@@ -502,6 +502,58 @@ a {
   font-size: 1.1rem;
 }
 
+.project-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.project-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.project-description {
+  color: #b0bec5;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.project-showcase {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.project-showcase::-webkit-scrollbar {
+  height: 6px;
+}
+.project-showcase::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+.project-showcase::-webkit-scrollbar-thumb {
+  background: rgba(245, 114, 63, 0.3);
+  border-radius: 3px;
+}
+.showcase-img {
+  height: 280px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  object-fit: cover;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  transition: border-color 0.3s;
+}
+.showcase-img:hover {
+  border-color: rgba(245, 114, 63, 0.5);
+}
+
 .project-links {
   display: flex;
   flex-wrap: wrap;
